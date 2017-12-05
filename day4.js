@@ -51,12 +51,10 @@ let result
 function getResult (input){
 	for (var i = 0; i < input.length; i++) {
 		input[i] = input[i].split(' ')
-		// console.log('getResult | input[i]', input[i])
-		result = isValid(input[i])
-		// console.log('result', result)
-		if(result && result == true)
-			count += 1
+	
+		isValid(input[i]) ? count+=1 : null
 	}
+
 	return count
 }
 
